@@ -19,3 +19,10 @@ C:\Users\ivan3\source\repos\Csharp-LW1-TDD\obj\Debug\Matrix.csproj.AssemblyRefer
 C:\Users\ivan3\source\repos\Csharp-LW1-TDD\obj\Debug\Matrix.csproj.CoreCompileInputs.cache
 C:\Users\ivan3\source\repos\Csharp-LW1-TDD\obj\Debug\Matrix.exe
 C:\Users\ivan3\source\repos\Csharp-LW1-TDD\obj\Debug\Matrix.pdb
+C:\Users\ivan3\Source\Repos\Csharp-LW1-TDD-clone\bin\Debug\Matrix.exe.config
+C:\Users\ivan3\Source\Repos\Csharp-LW1-TDD-clone\bin\Debug\Matrix.exe
+C:\Users\ivan3\Source\Repos\Csharp-LW1-TDD-clone\bin\Debug\Matrix.pdb
+C:\Users\ivan3\Source\Repos\Csharp-LW1-TDD-clone\obj\Debug\Matrix.csproj.AssemblyReference.cache
+C:\Users\ivan3\Source\Repos\Csharp-LW1-TDD-clone\obj\Debug\Matrix.csproj.CoreCompileInputs.cache
+C:\Users\ivan3\Source\Repos\Csharp-LW1-TDD-clone\obj\Debug\Matrix.exe
+C:\Users\ivan3\Source\Repos\Csharp-LW1-TDD-clone\obj\Debug\Matrix.pdb
