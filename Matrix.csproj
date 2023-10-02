@@ -44,9 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IMatrix.cs" />
-    <Compile Include="INode.cs" />
     <Compile Include="MatrixImplementation.cs" />
-    <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -4,8 +4,22 @@ namespace Matrix
 {
 	public class MatrixImplementation : IMatrix
 	{
-		private Node matrixData; // Поле, що буде використовуватись для представлення матриці
 
+		private Node matrixData; // Поле, що буде використовуватись для представлення матриці
+		private class Node
+		{
+			public int Row { get; set; }
+			public int Column { get; set; }
+			public int Value { get; set; }
+			public Node Next { get; set; }
+			public Node(int row, int column, int value)
+			{
+				Row = row;
+				Column = column;
+				Value = value;
+				Next = null;
+			}
+		}
 		public MatrixImplementation(int rows, int columns)//конструктор з параметрами
 		{
 			Rows = rows;
@@ -136,6 +150,11 @@ namespace Matrix
 		// Встановити значення елементу матриці за його рядком і стовпцем
 		public void SetValueAt(int row, int col, int value)
 		{
+			if (row < 0 || row >= Rows || col < 0 || col >= Columns)
+			{
+				throw new IndexOutOfRangeException("Invalid row or column index.");
+			}
+
 			if (matrixData == null)
 			{
 				matrixData = new Node(row, col, value);
@@ -157,6 +176,7 @@ namespace Matrix
 				}
 			}
 		}
+
 		// Метод для виведення матриці на консоль
 		public override string ToString()
 		{
@@ -183,11 +203,20 @@ namespace Matrix
 				for (int j = 0; j < Columns; j++)
 				{
 					Console.Write($"Введіть значення для рядка {i + 1}, стовпця {j + 1}: ");
-					int value = int.Parse(Console.ReadLine());
-					this.SetValueAt(i, j, value);
+					if (int.TryParse(Console.ReadLine(), out int value))
+					{
+						this.SetValueAt(i, j, value);
+					}
+					else
+					{
+						Console.WriteLine("Неправильне значення. Будь ласка, введіть ціле число.");
+						j--; // Повторити введення для того самого стовпця
+					}
 				}
 			}
 		}
+
+
 
 
 		// Помножити всі елементи матриці на константу
@@ -308,5 +337,6 @@ namespace Matrix
 			}
 			return null;
 		}
+
 	}
 }
